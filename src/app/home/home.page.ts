@@ -60,7 +60,6 @@ export class HomePage implements OnInit {
   async startTimeout() {
     console.log('startTimeout');
     const item = this.durations[this.current];
-    console.log(item, this.current);
     this.current++;
     const file = await this.play(this.getPath(item.audio));
     this.createTimeout(item.duration)
@@ -71,7 +70,7 @@ export class HomePage implements OnInit {
         },
         error => console.log(error),
         async () => {
-          console.log('end');
+          console.log('stop');
           file.stop();
           if (this.current <= this.durations.length - 1) {
             this.startTimeout();
