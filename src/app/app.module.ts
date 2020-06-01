@@ -5,7 +5,6 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { Media } from '@ionic-native/media/ngx';
 import { BackgroundMode } from '@ionic-native/background-mode/ngx';
 
@@ -20,7 +19,6 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
-    NativeAudio,
     Media,
     BackgroundMode,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
